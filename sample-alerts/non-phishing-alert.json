@@ -1,0 +1,25 @@
+{
+  "id": "1716638500.112233",
+  "timestamp": "2026-05-22T13:00:00.000Z",
+  "rule": {
+    "level": 5,
+    "id": "5501",
+    "description": "SSH: Authentication failed",
+    "groups": ["syslog", "sshd", "authentication_failed"],
+    "firedtimes": 3
+  },
+  "agent": {
+    "id": "007",
+    "name": "linux-server-02",
+    "ip": "10.0.1.45"
+  },
+  "manager": { "name": "wazuh-manager-lab" },
+  "decoder": { "name": "sshd" },
+  "data": {
+    "srcip": "192.168.1.100",
+    "dstuser": "admin"
+  },
+  "full_log": "May 22 13:00:00 linux-server-02 sshd[2345]: Failed password for admin from 192.168.1.100",
+  "location": "/var/log/auth.log",
+  "input": { "type": "log" }
+}
